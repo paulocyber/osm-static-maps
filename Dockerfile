@@ -19,7 +19,7 @@ RUN \
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y \
     && \
     /root/.cargo/bin/cargo install oxipng
-
+COPY . /app
 WORKDIR /app
 EXPOSE 3000
 CMD [ "npm", "run", "installandstartdev" ]
